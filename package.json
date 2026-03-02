@@ -1,0 +1,50 @@
+{
+  "name": "bulbul",
+  "productName": "Bulbul",
+  "version": "1.0.0",
+  "author": "Ambikesh Singh",
+  "description": "Bulbul - Speak in any language, type anywhere",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "koffi": "^2.15.1",
+    "robotjs": "^0.6.0",
+    "sarvamai": "^1.1.4"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.3",
+    "electron": "29.4.6",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.bulbul.app",
+    "productName": "Bulbul",
+    "electronVersion": "29.4.6",
+    "npmRebuild": false,
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "deltaMerger.js",
+      "index.html",
+      "indicator.html",
+      "notification.html",
+      "welcome.html",
+      "Icon_3.jpg",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "Icon_3.jpg"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

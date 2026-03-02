@@ -1,0 +1,8 @@
+node_modules/
+prd.txt
+.env
+br_extension.txt
+.env.example
+dist/
+build/
+*.exe

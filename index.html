@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>VoiceCursor Config</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #1a1a1a;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .stopped { color: #aaaaaa; }
+      .recording { color: #ff4d4d; animation: pulse 1s infinite; }
+
+      @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div>VoiceCursor Dictation</div>
+    <div id="status" class="stopped">Ready (Press Ctrl+Shift+V)</div>
+    
+    <script src="./renderer.js"></script>
+  </body>
+</html>

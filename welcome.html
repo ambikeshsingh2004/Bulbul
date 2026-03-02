@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Bulbul</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #e0e0e0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      user-select: none;
+    }
+
+    .logo {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 36px;
+    }
+
+    .steps {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .step-num {
+      background: linear-gradient(135deg, #e94560, #f5a623);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-text strong {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .step-text span {
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    kbd {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #f5a623;
+    }
+
+    .info {
+      font-size: 11px;
+      color: #666;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #e94560, #f5a623);
+      color: #fff;
+      border: none;
+      padding: 12px 40px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">🎙️</div>
+  <h1>Welcome to Bulbul</h1>
+  <p class="tagline">Speak in any language. Type anywhere.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <strong>Click into any app</strong>
+        <span>Open Notepad, VS Code, Chrome, WhatsApp Web — anything with a text field. Click where you want text to
+          appear.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <strong>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> to start</strong>
+        <span>The tray icon will start blinking 🔴. Speak naturally in English, Hindi, Tamil — or mix them.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <strong>Watch text appear</strong>
+        <span>Your speech is transcribed and typed automatically. You can switch windows while speaking.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <strong>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> to stop</strong>
+        <span>The blinking stops. Bulbul keeps running silently in the system tray — ready whenever you need it.</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="info">
+    Bulbul runs in your system tray (bottom-right corner).<br>
+    Right-click the tray icon to quit.
+  </p>
+
+  <button id="btn">Got it, let's go! 🚀</button>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', () => {
+      window.close();
+    });
+  </script>
+</body>
+
+</html>
